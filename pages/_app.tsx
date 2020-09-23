@@ -1,4 +1,5 @@
-import '../styles/globals.css'
+import '../styles.css'
+
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
