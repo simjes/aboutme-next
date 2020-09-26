@@ -21,6 +21,7 @@ const Home = () => {
       <Header className="bg-opacity-0" />
 
       <Main className="flex flex-col items-center justify-center">
+        {/* Special case - don't use Image component */}
         <img
           className="h-full w-full fixed top-0 left-0 object-cover -z-10"
           src={require(`Images/bg.jpeg?lqip`)}
@@ -31,6 +32,7 @@ const Home = () => {
           src={require(`Images/bg.jpeg?webp`)}
           alt="Neon sunset"
         />
+        {/* Special case end */}
 
         <motion.h1
           initial="hidden"

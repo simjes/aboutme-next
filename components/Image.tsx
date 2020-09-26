@@ -12,24 +12,27 @@ interface Props extends MotionProps {
 const Image = ({
   path,
   alt,
-  classNameContainer: className,
+  classNameContainer,
   classNameImage,
   classNameShared,
   ...rest
 }: Props) => (
-  <motion.div className={cn('relative', className, classNameShared)} {...rest}>
+  <motion.div
+    className={cn('relative', classNameShared, classNameContainer)}
+    {...rest}
+  >
     <img
       className={cn(
         'absolute top-0 left-0 blur-image',
-        classNameImage,
         classNameShared,
+        classNameImage,
       )}
       src={require(`Images/${path}?lqip`)}
       alt={alt}
     />
 
     <img
-      className={cn('absolute top-0 left-0', classNameImage, classNameShared)}
+      className={cn('absolute top-0 left-0', classNameShared, classNameImage)}
       src={require(`Images/${path}?webp`)}
       alt={alt}
     />
