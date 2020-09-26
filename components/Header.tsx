@@ -2,9 +2,13 @@ import cn from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const Header = () => {
+interface Props {
+  className?: string
+}
+
+const Header = ({ className }: Props) => {
   return (
-    <header className="py-5 px-2 bg-gray-900">
+    <header className={cn('py-5 px-2 bg-gray-900', className)}>
       <nav>
         <ul className="flex justify-end w-full max-w-6xl space-x-4 mx-auto">
           <li>
@@ -35,14 +39,15 @@ const NavLink = ({ to, name }: { to: string; name: string }) => {
     <Link href={to}>
       <a
         className={cn(
-          'font-bold text-blue-500 transition-colors duration-200 hover:text-pink-500',
+          'neo-noire transition-colors duration-200 hover:text-pink-800 hover:underline',
           {
-            'text-pink-500': isActive,
             underline: isActive,
           },
+          isActive ? 'text-active' : 'text-passive',
         )}
       >
-        {name}
+        {/* NeoNoire font type is based on casing */}
+        {name.toLowerCase()}
       </a>
     </Link>
   )

@@ -5,15 +5,44 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'lazer84';
-  src: url('/fonts/lazer84.woff') format('woff');
+  font-family: 'NeoNoire';
+  src: url('/fonts/SNNeoNoire-Regular.woff') format('woff'),
+    url('/fonts/SNNeoNoire-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-.lazer-title {
-  font-family: 'lazer84';
-  color: cyan;
-  text-shadow: -5px 5px 0px #e100ff;
+/* TODO: extend tailwind? */
+.neo-noire {
+  font-family: 'NeoNoire';
 }
+
+.title-shadow {
+  text-shadow: -5px 5px 0px theme('colors.text-shadow');
+}
+
+/* .neo-noire-title {
+  font-family: 'NeoNoire';
+  color: cyan; */
+/* background: linear-gradient(
+    to bottom right,
+    rgba(252, 176, 69, 1) 27%,
+    rgba(253, 29, 29, 1) 44%,
+    rgba(131, 58, 180, 1) 100%
+  ); */
+/* background: linear-gradient(351deg, rgba(131,58,180,1) 22%, rgba(253,100,29,1) 63%, rgba(252,176,69,1) 100%); */
+/* background: linear-gradient(326deg, rgba(253,2,156,1) 0%, rgba(141,46,234,1) 45%, rgba(123,32,213,1) 64%, rgba(0,204,255,1) 100%); */
+/* background: linear-gradient(to bottom right, #f6af02, #b602c1); */
+/* background: linear-gradient(355deg, rgba(152,2,199,1) 21%, rgba(235,87,123,1) 52%, rgba(246,123,57,1) 76%, rgba(247,173,0,1) 93%); */
+/* background-clip: text;
+  -webkit-text-fill-color: transparent; */
+/* text-shadow: 2px 2px 5px red; */
+/* text-shadow: -5px 5px 0px #e100ff; */
+/* text-shadow: -5px 5px 0px #330458; */
+/* } */
+
+/* .neo-noire-subtitle {
+  font-family: 'NeoNoire';
+  color: cyan;
+} */

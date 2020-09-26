@@ -16,7 +16,13 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="preload" href="/fonts/lazer84.woff" as="font" />
+          {/* TODO: preload only best font for browser? */}
+          <link rel="preload" href="/fonts/SNNeoNoire-Regular.woff" as="font" />
+          <link
+            rel="preload"
+            href="/fonts/SNNeoNoire-Regular.woff2"
+            as="font"
+          />
         </Head>
         <body>
           <Main />
