@@ -3,3 +3,17 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+@font-face {
+  font-family: 'lazer84';
+  src: url('/fonts/lazer84.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.lazer-title {
+  font-family: 'lazer84';
+  color: cyan;
+  text-shadow: -5px 5px 0px #e100ff;
+}
