@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import { fadeInUp } from '../animations'
 import Header from '../components/Header'
+import Image from '../components/Image'
 import Main from '../components/Main'
 
 const Home = () => {
@@ -20,10 +21,14 @@ const Home = () => {
       <Header className="bg-opacity-0" />
 
       <Main className="flex flex-col items-center justify-center">
-        {/* TODO: Lazy load blur image */}
         <img
           className="h-full w-full fixed top-0 left-0 object-cover -z-10"
-          src="/bg.jpg"
+          src={require(`Images/bg.jpeg?lqip`)}
+          alt="Neon sunset"
+        />
+        <img
+          className="h-full w-full fixed top-0 left-0 object-cover -z-10"
+          src={require(`Images/bg.jpeg?webp`)}
           alt="Neon sunset"
         />
 
@@ -45,13 +50,15 @@ const Home = () => {
           {subtitle}
         </motion.p>
 
-        <motion.img
-          src="/profilePicture.jpg"
+        <Image
+          path="profilePicture.jpeg"
           alt="Simon"
+          classNameShared="w-40 h-40"
+          classNameContainer="mt-5"
+          classNameImage="rounded-full border-4 border-passive"
           initial="hidden"
           animate="show"
           variants={fadeInUp}
-          className="w-40 rounded-full border-4 border-blue-500 mt-5"
         />
       </Main>
 
