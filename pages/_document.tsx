@@ -23,6 +23,8 @@ class MyDocument extends Document {
             href="/fonts/SNNeoNoire-Regular.woff2"
             as="font"
           />
+
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />

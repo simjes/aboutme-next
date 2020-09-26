@@ -2,7 +2,7 @@ import cn from 'classnames'
 import { motion, MotionProps } from 'framer-motion'
 
 interface Props extends MotionProps {
-  path: string
+  filename: string
   alt: string
   classNameContainer?: string
   classNameImage?: string
@@ -10,7 +10,7 @@ interface Props extends MotionProps {
 }
 
 const Image = ({
-  path,
+  filename,
   alt,
   classNameContainer,
   classNameImage,
@@ -27,13 +27,13 @@ const Image = ({
         classNameShared,
         classNameImage,
       )}
-      src={require(`Images/${path}?lqip`)}
+      src={require(`Images/${filename}?lqip`)}
       alt={alt}
     />
 
     <img
       className={cn('absolute top-0 left-0', classNameShared, classNameImage)}
-      src={require(`Images/${path}?webp`)}
+      src={require(`Images/${filename}?webp`)}
       alt={alt}
     />
 

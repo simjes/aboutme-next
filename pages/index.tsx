@@ -1,10 +1,10 @@
+import { fadeInUp } from '@animations'
+import Header from '@components/Header'
+import Image from '@components/Image'
+import Main from '@components/Main'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
-
-import { fadeInUp } from '../animations'
-import Header from '../components/Header'
-import Image from '../components/Image'
-import Main from '../components/Main'
+import React from 'react'
 
 const Home = () => {
   // NeoNoire font has two alternatives - which is based on casing
@@ -15,7 +15,6 @@ const Home = () => {
     <>
       <Head>
         <title>Home | Simjes</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header className="bg-opacity-0" />
@@ -53,7 +52,7 @@ const Home = () => {
         </motion.p>
 
         <Image
-          path="profilePicture.jpeg"
+          filename="profilePicture.jpeg"
           alt="Simon"
           classNameShared="w-40 h-40"
           classNameContainer="mt-5"
@@ -64,7 +63,7 @@ const Home = () => {
         />
       </Main>
 
-      <footer>ble</footer>
+      {/* <footer>ble</footer> */}
     </>
   )
 }
