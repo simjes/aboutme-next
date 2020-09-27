@@ -1,0 +1,20 @@
+type Company {
+  publicImageId: String!
+  name: String!
+  position: String!
+  startDate: Time!
+  endDate: Time
+}
+
+type Talk {
+  name: String!
+  time: Time!
+  talkUrl: String!
+  description: String!
+  publicImageId: String!
+}
+
+type Query {
+  allCompanies: [Company!]
+  allTalks: [Talk!]
+}
